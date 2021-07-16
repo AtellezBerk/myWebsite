@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+    <section class="sub-section" id="about-me">
+            <div class="information">
+                <h2>About Me</h2>
+                <p>
+                    I have always been very excited about the possibilities that the internet brings us. Now as a computer science student I know of the possibilities that I can achieve. I am enthusiastic about what the future brings and I am going to do my very best for there to be an exciting future ahead of us. I am a Junior at the University of Texas at El Paso, and I am well versed in Java and Python, and very excited to keep learning more.
+                </p>
+            </div>
+            <div class="headshot-container">
+                <img class="headshot" src="{{ url_for('static', filename='images/Headshot.jpg') }}" alt="Headshot"/>
+            </div>
+        </section>
+        <section class="sub-section-alternative" id="projects">
+            <h2>Projects</h2>
+            <div class="project-container">
+                <div class="project-card">
+                    <img class="project-image" src="{{ url_for('static', filename='images/sudoku.jpg') }}" alt="Sudoku"/>
+                    <h3>Sudoku</h3>
+                    <p class="subtext">This is a sudoku game I made using pygame.</p>
+                    <hr/>
+                    <p class="subtext"><a class="project-link" href="{{ url_for('views.sudoku') }}">View here</a></p>
+                </div>
+                <div class="project-card">
+                    <img class="project-image" src="{{ url_for('static', filename='images/flappybird-1.jpg') }}" alt="Project image"/>
+                    <h3>Flappy Bird</h3>
+                    <p class="subtext">This is a flappy bird game I made using pygame.</p>
+                    <hr/>
+                    <p class="subtext"><a class="project-link" href="{{ url_for('views.flappy_bird') }}">View here</a></p>
+                </div>
+
+            </div>
+        </section>
+        <footer id="contact-me">
+            <div class="contact">
+                <div class="button"><a href="{{ url_for('views.contact') }}">Contact me</a></div>
+            </div>
+
+
+        </footer>
+
+
+
+
+
+{% endblock %}
